@@ -1,6 +1,6 @@
 import HornedBeasts from "./HornedBeasts";
-import beast1Image from "./assets/horned-beast1.jpg";
-import beast2Image from "./assets/horned-beast2.jpg";
+import beast1Image from "./assets/goldhornedbeast1.jpg";
+import beast2Image from "./assets/bluehornedbeast1.jpg";
 
 const Gallery = () => {
     return (
