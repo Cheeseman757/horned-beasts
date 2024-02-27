@@ -10,12 +10,12 @@ const Gallery = () => {
             <HornedBeasts
                 title="Animal 1"
                 imageUrl={beast1Image}
-                description="Southern Horned Beast"
+                description="Heavenly Horned Beast"
             />
             <HornedBeasts
                 title="Animal 2"
                 imageUrl={beast2Image}
-                description="Mediterranian Horned Beast"
+                description="Evil Horned Beast"
             />
         </div>
         </div>
