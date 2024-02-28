@@ -1,27 +1,28 @@
-import hornedbeasts from "hornedbeasts.jsx";
-import beastData from "assets/data.json"
-import { Container, Row, Col } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import HornedBeasts from "./HornedBeasts";
+import data from './assets/data.json';
+import Row from 'react-bootstrap/Row';
 
-function Gallery() {
-  return (
-    <>
-      <Container>
-        <Row>
-          <Col>
-            {beastData.map(obj => {
-              return (
-                <hornedbeasts 
-                key={obj._id}
-                title={obj.title} 
-                description={obj.description} 
-                imageUrl={obj.image_url} />  
-              )
-            })}
-          </Col>
-        </Row>
-      </Container>
-    </>
-  );
-}
+const Gallery = () => {
+    return (
+        <div>
+            <h2>Gallery</h2>
+            <div>
+            <Row xs="auto" md="auto" lg="auto">
+                {data.map(obj => {
+                return (
+                    <HornedBeasts 
+                    key={obj._id}
+                    title={obj.title} 
+                    description={obj.description} 
+                    imageUrl={obj.image_url} />  
+                )
+                    })}
+            </Row>
+            `</div>
+        </div>
+        
+    );
+};
 
-export default Gallery
+export default Gallery;
