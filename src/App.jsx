@@ -1,6 +1,6 @@
 import './App.css'
-import Header from './Header.jsx'
-import Gallery from './Gallery.jsx'
+import Header from './header.jsx'
+import Gallery from './gallery.jsx'
 import Footer from './Footer.jsx'
 
 function App() {
