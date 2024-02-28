@@ -1,19 +1,18 @@
-import PropTypes from 'prop-types';
+import { useState } from 'react';
+import { Card } from 'react-bootstrap';
 
-const HornedBeasts = ({title, imageUrl, description}) => {
+function HornedBeast(props) {
+    const [likes, setLikes] = useState(0);
     return (
-        <div>
-            <h2>{title}</h2>
-            <img src={imageUrl} alt={title} title={title} />
-            <p>{description}</p>
-        </div>
-    );
+        <>
+            <Card.Img style={{width:"50%"}} onClick={() => setLikes(likes + 1)} src={props.imageUrl} alt="" />
+            <Card.Body>
+                <Card.Title>{props.title}</Card.Title>
+                <Card.Text> {props.description} </Card.Text>
+                <Card.Text> Favorites: {likes} </Card.Text>
+            </Card.Body>
+        </>
+    )
 }
 
-HornedBeasts.propTypes = {
-    title: PropTypes.string.isRequired,
-    imageUrl: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-};
-
-export default HornedBeasts;
+export default HornedBeast;
