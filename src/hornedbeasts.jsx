@@ -1,18 +1,24 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from 'react';
-import { Card } from 'react-bootstrap';
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
 
-function hornedbeasts(props) {
+
+
+const HornedBeasts = (props) => {
     const [likes, setLikes] = useState(0);
     return (
-        <>
-            <Card.Img style={{width:"50%"}} onClick={() => setLikes(likes + 1)} src={props.imageUrl} alt="" />
-            <Card.Body>
-                <Card.Title>{props.title}</Card.Title>
-                <Card.Text> {props.description} </Card.Text>
-                <Card.Text> Favorites: {likes} </Card.Text>
-            </Card.Body>
-        </>
-    )
-}
+        <Card style={{ width: '18rem' }}>
+          <Card.Img variant="top" src={props.imageUrl} alt="horned beast image" />
+          <Card.Body>
+            <Card.Title>{props.title}</Card.Title>
+            <Card.Text>
+              {props.description}
+            </Card.Text>
+            <Button onClick={() => setLikes(likes + 1)} variant="primary">💖 Like</Button>
+          </Card.Body>
+        </Card>
+      );
+    }
 
-export default HornedBeast;
+export default HornedBeasts;
