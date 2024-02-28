@@ -1,9 +1,8 @@
-const Footer = () => {
+function Footer() {
     return (
-        <footer>
-            <p>&copy; JAC aka Cheeze</p>
-        </footer>
-    );
-};
+        <p> Cheesem </p>
+    )
+}
 
-export default Footer;
+export default Footer
+
