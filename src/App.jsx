@@ -1,21 +1,16 @@
 import './App.css'
+import Header from './Header.jsx'
+import Gallery from './Gallery.jsx'
+import Footer from './Footer.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-        <header>
-            <h1>Horned Beasts</h1>
-        </header>
-        <main>
-           <p>PLaceholder</p>
-        </main>
-        <footer>
-          <p>placeholder footer</p>
-        </footer>
-  
-        </>
+      <Header />
+      <Gallery />
+      <Footer />
+    </>
   )
 }
 
