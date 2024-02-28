@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Hornedbeasts from "./hornedbeasts.jsx";
+import HornedBeasts from "./hornedbeasts.jsx";
 import data from './assets/data.json';
 import Row from 'react-bootstrap/Row';
 
