@@ -1,4 +1,4 @@
-import hornedBeasts from "./hornedBeasts";
+import hornedBeasts from "./hornedbeasts.jsx";
 import beast1Image from "./assets/goldhornedbeast1.jpg";
 import beast2Image from "./assets/bluehornedbeast1.jpg";
 
