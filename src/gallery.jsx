@@ -1,4 +1,4 @@
-import hornedbeast from "./hornedbeasts.jsx";
+import hornedbeasts from "./hornedbeasts.jsx";
 import beastData from "./assets/data.json"
 import { Container, Row, Col } from 'react-bootstrap';
 
