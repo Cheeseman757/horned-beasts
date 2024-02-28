@@ -1,6 +1,6 @@
 function Footer() {
     return (
-        <p> Cheesem </p>
+        <p> Cheeseman </p>
     )
 }
 
