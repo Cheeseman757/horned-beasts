@@ -1,24 +1,28 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { useState } from 'react';
-import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
+import hornedBeasts from "./hornedBeasts";
+import data from './assets/data.json';
+import Row from 'react-bootstrap/Row';
 
-
-
-const HornedBeasts = (props) => {
-    const [likes, setLikes] = useState(0);
+const Gallery = () => {
     return (
-        <Card style={{ width: '18rem' }}>
-          <Card.Img variant="top" src={props.imageUrl} alt="horned beast image" />
-          <Card.Body>
-            <Card.Title>{props.title}</Card.Title>
-            <Card.Text>
-              {props.description}
-            </Card.Text>
-            <Button onClick={() => setLikes(likes + 1)} variant="primary">💖 Like</Button>
-          </Card.Body>
-        </Card>
-      );
-    }
+        <div>
+            <h2>Gallery</h2>
+            <div>
+            <Row xs="auto" md="auto" lg="auto">
+                {data.map(obj => {
+                return (
+                    <hornedbeasts 
+                    key={obj._id}
+                    title={obj.title} 
+                    description={obj.description} 
+                    imageUrl={obj.image_url} />  
+                )
+                    })}
+            </Row>
+            `</div>
+        </div>
+        
+    );
+};
 
-export default HornedBeasts;
+export default Gallery;
