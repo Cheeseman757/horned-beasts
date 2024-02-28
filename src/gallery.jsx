@@ -10,7 +10,7 @@ function Gallery() {
           <Col>
             {beastData.map(obj => {
               return (
-                <HornedBeast 
+                <hornedbeasts 
                 key={obj._id}
                 title={obj.title} 
                 description={obj.description} 
