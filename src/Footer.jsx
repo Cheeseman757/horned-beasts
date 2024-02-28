@@ -1,8 +1,9 @@
-function Footer() {
+const Footer = () => {
     return (
-        <p> Cheeseman </p>
-    )
-}
+        <footer>
+            <p>&copy; Cheeseman</p>
+        </footer>
+    );
+};
 
-export default Footer
-
+export default Footer;
