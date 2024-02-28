@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Card } from 'react-bootstrap';
 
-function HornedBeast(props) {
+function hornedbeasts(props) {
     const [likes, setLikes] = useState(0);
     return (
         <>
