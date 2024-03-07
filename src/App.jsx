@@ -3,7 +3,7 @@ import './App.css'
 import Header from './header.jsx'
 import Gallery from './gallery.jsx'
 import Footer from './footer.jsx'
-import SelectedBeast from './SelectedBeast.jsx'
+import SelectedBeast from './selectedbeasts.jsx'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import beastData from "./assets/data.json"
@@ -25,7 +25,7 @@ function App() {
   return (
     <>
       <Header />
-      <SelectedBeast showBool={show} onHide={closeModal} selectBeast={beast} />
+      <selectedbeasts showBool={show} onHide={closeModal} selectBeast={beast} />
       <Gallery beastData={beastData} onClick={showModal}  />
       <Footer />
     </>
