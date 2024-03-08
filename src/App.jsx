@@ -26,8 +26,8 @@ function App() {
     <>
       <Header />
       <selectedbeasts showbool={show} onHide={closeModal} selectedbeasts={beast} />
-      <Gallery beastData={beastData} onClick={showModal}  />
-      <Footer />
+      <gallery beastData={beastData} onClick={showModal}  />
+      <footer />
     </>
   )
 }
