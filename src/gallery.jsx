@@ -1,28 +1,36 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import HornedBeasts from "./hornedbeasts.jsx";
-import data from './assets/data.json';
-import Row from 'react-bootstrap/Row';
+import HornedBeast from "./HornedBeast";
+import BeastFilter from './BeastFilter.jsx'
+import { Container, Row } from 'react-bootstrap';
+import { useState } from 'react'
 
-const Gallery = () => {
-    return (
-        <div>
-            <h2>Gallery</h2>
-            <div>
-            <Row xs="auto" md="auto" lg="auto">
-                {data.map(obj => {
-                return (
-                    <HornedBeasts 
-                    key={obj._id}
-                    title={obj.title} 
-                    description={obj.description} 
-                    imageUrl={obj.image_url} />  
-                )
-                    })}
-            </Row>
-            `</div>
-        </div>
-        
-    );
-};
+function Gallery(props) {
 
-export default Gallery;
+  const [filteredBeasts, setFilteredBeasts] = useState(props.beastData);
+  const handleChange = (value) => {
+    if (value == "All Beasts") {
+      setFilteredBeasts(props.beastData);
+    } else {
+      setFilteredBeasts(props.beastData.filter(obj => obj.horns == value));
+    }
+  }
+
+  return (
+    <>
+      <BeastFilter onChange={handleChange} />
+      <Container>
+        <Row xs={2} sm={3} md={4} lg={5}>
+            {filteredBeasts.map(obj => {  
+              return (<HornedBeast 
+              key={obj._id}
+              hb_object={obj} 
+              horns={obj.horns}
+              onClick={props.onClick} />) 
+            })}
+        </Row>
+      </Container>
+    </>
+    
+  );
+}
+
+export default Gallery
