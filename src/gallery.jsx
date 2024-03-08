@@ -1,5 +1,5 @@
-import HornedBeast from "./HornedBeast";
-import BeastFilter from './BeastFilter.jsx'
+import HornedBeast from "./hornedbeasts";
+import BeastFilter from './beastfilter.jsx'
 import { Container, Row } from 'react-bootstrap';
 import { useState } from 'react'
 
