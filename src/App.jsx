@@ -3,7 +3,7 @@ import './App.css'
 import Header from './header.jsx'
 import Gallery from './gallery.jsx'
 import Footer from './Footer.jsx'
-import SelectedBeast from './Selectedbeasts.jsx'
+import SelectedBeast from './selectedbeasts.jsx'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import beastData from "./assets/data.json"
