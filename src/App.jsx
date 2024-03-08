@@ -25,7 +25,7 @@ function App() {
   return (
     <>
       <Header />
-      <selectedbeasts showbool={show} onHide={closeModal} selectbeast={beast} />
+      <Selectedbeasts showbool={show} onHide={closeModal} selectbeast={beast} />
       <Gallery beastData={beastData} onClick={showModal}  />
       <Footer />
     </>
